@@ -32,18 +32,17 @@ export function watch(callback: (state: AppState) => void) {
     const pathname = location.pathname;
     if (!pathname.startsWith("/calendar")) return { isCalendar: false };
 
-    if (pathname.startsWith("/calendar/view/day"))
-      return { isCalendar: true, view: "day" };
-    if (pathname.startsWith("/calendar/view/workweek"))
-      return { isCalendar: true, view: "workweek" };
-    if (pathname.startsWith("/calendar/view/week"))
-      return { isCalendar: true, view: "week" };
-    if (pathname.startsWith("/calendar/view/month"))
-      return { isCalendar: true, view: "month" };
-
-    if (pathname.startsWith("/calendar/view/"))
+    if (pathname.includes("/view/")) {
+      if (pathname.includes("view/day"))
+        return { isCalendar: true, view: "day" };
+      if (pathname.includes("view/workweek"))
+        return { isCalendar: true, view: "workweek" };
+      if (pathname.includes("view/week"))
+        return { isCalendar: true, view: "week" };
+      if (pathname.includes("view/month"))
+        return { isCalendar: true, view: "month" };
       console.warn("Unknown calendar view:", pathname);
-    else console.log("Not view path:", pathname);
+    } else console.log("Not view path:", pathname);
     return null;
   }
 
