@@ -6,7 +6,11 @@ const metadataObject: Metadata = {
   version: pkg.version,
   description: "Scroll to switch calendar months in Outlook PWA",
   author: "Linho1219",
-  match: ["https://outlook.live.com/*", "https://outlook.office.com/*"],
+  match: [
+    "https://outlook.live.com/*",
+    "https://outlook.office.com/*",
+    "https://outlook.office365.com/*",
+  ],
   grant: "none",
   "run-at": "document-end",
 
