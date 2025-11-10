@@ -11,7 +11,7 @@ Supports natural vertical or horizontal scroll navigation depending on the calen
 - Detect Outlook calendar views (day, workweek, week, month) dynamically in the SPA environment.
 - Enable intuitive scrolling navigation:
   - Month view: scroll up/down to switch months.
-  - Week/day views: scroll left/right to switch weeks/days.
+  - Week/day views: scroll left/right to switch weeks/days. You can also hold shift and scroll vertically.
 - Visual scroll indicator with smooth feedback and trigger threshold.
 - Written in TypeScript with Vite build setup.
 - Easy to customize and extend.
