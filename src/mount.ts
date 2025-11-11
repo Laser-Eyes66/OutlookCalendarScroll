@@ -116,7 +116,14 @@ export function mountScrollIndicator(
 
   function onWheel(e: WheelEvent) {
     if (e.ctrlKey) return;
-    const delta = dir === "vertical" ? e.deltaY : e.deltaX;
+    let delta;
+      // Minor change to allow shift scroll to work horizontally
+      if (dir === "vertical") {
+        if (e.shiftKey) return;
+        delta = e.deltaY;
+      } else {
+        delta = e.deltaX !== 0 ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+      }
     if (!delta) return;
     accumulated += delta;
     const { triggered, value } = interpretAccumulated(
