@@ -1,5 +1,7 @@
 # Outlook Calendar Scroll Enhancer
 
+![Screen record](./assets/screenRecord.gif)
+
 [中文](#outlook-日历滚动增强脚本)
 
 A userscript to enhance the scrolling experience in the Outlook Web Calendar.
