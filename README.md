@@ -14,19 +14,19 @@ Supports natural vertical or horizontal scroll navigation depending on the calen
   - Week/day views: scroll left/right to switch weeks/days. You can also hold shift and scroll vertically.
 - Visual scroll indicator with smooth feedback and trigger threshold.
 - Written in TypeScript with Vite build setup.
-- Easy to customize and extend.
+- Easy to customize and extend (the indicator element has class name `ocs-scroll-indicator` for you to write your own CSS).
 
 ## Installation
 
 [Get it directly from Greasy Fork](https://greasyfork.org/zh-CN/scripts/544953-outlook-calendar-scroll)
 
-The source code does not contain the built userscript file (*.user.js). Please visit the [Releases page](https://github.com/Linho1219/OutlookCalendarScroll/releases/latest), download `outlook-calendar-scroll.user.js` and put it in a userscript manager (Tampermonkey, Violentmonkey, etc.). Enjoy.
+The source code does not contain the built userscript file (`*.user.js`). Please visit the [Releases page](https://github.com/Linho1219/OutlookCalendarScroll/releases/latest), download `outlook-calendar-scroll.user.js` and put it in a userscript manager (Tampermonkey, Violentmonkey, etc.). Enjoy.
 
 ## Development
 
 - Node.js and pnpm required.
 - `pnpm install` to install dependencies.
-- `pnpm dev` `pnpm dev` starts a development server that serves the userscript at `http://localhost:3000/outlook-calendar-scroll.user.js`, which reloads automatically on source changes.  You can load this URL directly in your userscript manager for live testing.
+- `pnpm dev` starts a development server that serves the userscript at `http://localhost:3000/outlook-calendar-scroll.user.js`, which reloads automatically on source changes. You can load this URL directly in your userscript manager for live testing.
 - `pnpm build` to build the userscript (`dist/outlook-calendar-scroll.user.js`).
 
 ## License
@@ -44,14 +44,15 @@ MIT
 - 动态识别 Outlook PWA 中的日历视图（天、工作周、周、月）
 - 根据视图类型切换滚动方向：
   - 月视图：上下滚动切换月份
-  - 周/日视图：左右滚动切换周或日
+  - 周/日视图：左右滚动（或按住 Shift 滚动）切换周或日
 - 滚动触发带有视觉指示器
+- 可自定义样式：指示器带有类名 `ocs-scroll-indicator`，可以用其他插件（例如 Stylus）自定义样式
 
 ## 安装使用
 
 [前往 Greasy Fork 直接安装](https://greasyfork.org/zh-CN/scripts/544953-outlook-calendar-scroll)
 
-仓库源码不包含构建产物。请前往 [Release 页面](https://github.com/Linho1219/OutlookCalendarScroll/releases/latest) 下载后导入篡改猴 / 暴力猴等脚本管理器。一般来说直接点击 .user.js 就会自动导入。
+仓库源码不包含构建产物（`*.user.js`）。请前往 [Release 页面](https://github.com/Linho1219/OutlookCalendarScroll/releases/latest) 下载后导入篡改猴 / 暴力猴等脚本管理器。一般来说直接点击 .user.js 就会自动导入。
 
 ## 开发
 
