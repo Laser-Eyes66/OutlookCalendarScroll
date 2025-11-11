@@ -37,6 +37,7 @@ export function mountScrollIndicator(
   let timeout: number | undefined;
 
   const indicator = document.createElement("div");
+  indicator.className = "ocs-scroll-indicator";
   Object.assign(indicator.style, {
     position: "absolute",
     width: `${INDICATOR_SIZE}px`,
@@ -53,7 +54,7 @@ export function mountScrollIndicator(
     justifyContent: "center",
     pointerEvents: "none",
   });
-  indicator.innerText = "\ue33a"; // Fluent calendar icon
+  indicator.innerText = "\ue32c"; // Fluent calendar icon
 
   if (dir === "vertical") {
     indicator.style.left = "50%";
@@ -67,9 +68,11 @@ export function mountScrollIndicator(
 
   function setColor(triggered: boolean) {
     if (triggered) {
+      indicator.classList.add("triggered");
       indicator.style.backgroundColor = TRIGGERED_BG;
       indicator.style.color = TRIGGERED_COLOR;
     } else {
+      indicator.classList.remove("triggered");
       indicator.style.backgroundColor = NORMAL_BG;
       indicator.style.color = NORMAL_COLOR;
     }
